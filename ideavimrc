@@ -1,0 +1,60 @@
+let mapleader = " "
+
+" no double period after .?! when using join command
+set nojoinspaces
+" relative line numbers
+set relativenumber
+" actual line number for current line
+set number
+
+" set clipboard=unnamedplus,unnamed
+
+" exit insert mode
+inoremap jk <Esc>
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" <leader>n to hide highlighted search results
+nnoremap <leader>n :noh<CR>
+"
+" 3 lines above/below cursor when scrolling
+set scrolloff=3
+
+" Integrate with system clipboard
+" set clipboard=unnamedplus,unnamed
+
+" These create newlines like o and O but stay in normal mode
+nnoremap zj o<Esc>k
+nnoremap zk O<Esc>j
+
+" key bindings for quickly moving between windows
+" h left, l right, k up, j down
+nnoremap <leader>h <c-w>h
+nnoremap <leader>l <c-w>l
+nnoremap <leader>k <c-w>k
+nnoremap <leader>j <c-w>j
+
+" nnoremap <leader>b :action Back<cr>
+" nnoremap <leader>f :action Forward<cr>
+
+" nnoremap gc :action GotoClass<cr>
+nnoremap gf :action GotoFile<cr>
+nnoremap gs :action GotoSymbol<cr>
+
+nnoremap <leader>e :action ShowErrorDescription<cr>
+nnoremap <leader>p :action FileStructurePopup<cr>
+nnoremap <leader>u :action FindUsages<cr>
+
+# nnoremap gcc :action CommentByLineComment<cr>
+# vnoremap gc :action CommentByLineComment<cr>
+nnoremap crn :action RenameElement<cr>
+
+nnoremap gq :action ReformatCode<cr>
+
+nmap <leader><leader> :action KJumpAction<cr>
+set commentary
+set surround

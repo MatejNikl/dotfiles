@@ -1,0 +1,19 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1395,
+       "width": 1264,
+       "x": 4,
+       "y": 11
+    },
+    "name": "dataset_profiler [~/work/dataset_profiler] - .../tests/profiler/test_datasource_connectors.py",
+    "percent": 1,
+    "swallows": [
+       {
+           "class": "^jetbrains\\-pycharm\\-ce$"
+       }
+    ],
+    "type": "con"
+}

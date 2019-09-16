@@ -1,0 +1,19 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1046,
+       "width": 952,
+       "x": 1608,
+       "y": 365
+    },
+    "name": "Slack | * general | Ataccama",
+    "percent": 1,
+    "swallows": [
+       {
+           "class": "^Slack$"
+       }
+    ],
+    "type": "con"
+}

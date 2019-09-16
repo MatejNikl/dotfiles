@@ -1,0 +1,2 @@
+EXCLUDES="oh-my-zsh keyboard slink.sh README.md i3blocks-contrib i3blocks-scripts *_orig"
+SYMLINK_DIRS="vim ws"
