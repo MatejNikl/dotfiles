@@ -369,7 +369,8 @@ bar {
   font $i3-wm.bar.font
   separator_symbol " "
   status_command i3xrocks -c $i3xrocks_config
-  tray_output primary
+  # tray_output primary
+  tray_output none
   strip_workspace_numbers yes
 
   colors {
@@ -407,7 +408,7 @@ exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
 # assign [class="St"] $ws2
 # assign [class="Spotify|Rhythmbox"] $ws3
 # assign [class="jetbrains-pycharm-ce"] $ws4
-# assign [class="GitKraken"] $ws5
+assign [class="GitKraken"] $ws6
 for_window [class="Spotify"] move to workspace $ws3
 
 # bindcode $mod+$key_[ exec $nsi setxkbmap us dvp
@@ -417,9 +418,9 @@ for_window [class="Spotify"] move to workspace $ws3
 exec $nsi i3-msg 'workspace $ws1; append_layout /home/mnikl/.dotfiles/config/regolith/i3/ws/1.json; workspace $ws2; append_layout /home/mnikl/.dotfiles/config/regolith/i3/ws/2.json; workspace $ws4; append_layout /home/mnikl/.dotfiles/config/regolith/i3/ws/4.json; workspace $ws5; append_layout /home/mnikl/.dotfiles/config/regolith/i3/ws/5.json; workspace $ws1'
 
 exec chromium-browser
+exec toggldesktop
 exec st
 exec spotify
 exec pycharm-community
 exec slack
-# exec gitkraken
-exec toggldesktop
+exec gitkraken

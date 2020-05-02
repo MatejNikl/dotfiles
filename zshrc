@@ -8,7 +8,7 @@ ZSH_THEME="jtriley"
 COMPLETION_WAITING_DOTS="true"
 
 # Loaded plugins.
-plugins=(autojump colored-man-pages catimg colorize cp history vi-mode)
+plugins=(autojump colored-man-pages catimg cp history vi-mode)
 
 # Bind 'jk' to command mode.
 bindkey -M viins 'jk' vi-cmd-mode
@@ -104,7 +104,12 @@ ex ()
 # export TERM='xterm-256color'
 
 # dip!!!!!!!!
-alias cad='conda activate dip'
+alias ca='conda activate'
+alias cde='conda deactivate'
+alias cab='cde; ca base; cd ~/work/ai-core-modules'
+alias cam='cde; ca ai-core-modules; cd ~/work/ai-core-modules'
+alias cai='cde; ca ai-core-api; cd ~/work/ai-core-api'
+alias cap='cde; ca profiler; cd ~/work/dataset_profiler'
 alias ci='conda install'
 alias halmos='ssh niklmate@halmos.felk.cvut.cz'
 alias boruvka='ssh niklmate@boruvka.felk.cvut.cz'
@@ -153,7 +158,7 @@ setopt nohup
 # See: http://zsh.sourceforge.net/Intro/intro_2.html
 setopt extendedglob
 # Do not require a leading '.' in a filename to be matched explicitly
-setopt globdots
+# setopt globdots
 # Use vi key bindings in ZSH
 setopt vi
 # Automatically use menu completion after the second consecutive request for
@@ -174,7 +179,7 @@ setopt alwaystoend
 # Try to correct the spelling of commands
 setopt correct
 # https://github.com/robbyrussell/oh-my-zsh/issues/449
-setopt no_nomatch  
+setopt no_nomatch
 # Disable annoying confirm
 # setopt rmstarsilent
 
@@ -184,7 +189,7 @@ alias dh='dirs -v'
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
+# zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
 eval "$(dircolors -b)"
@@ -204,6 +209,14 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 autoload -U promptinit && promptinit
 autoload -U compinit compdef && compinit
 
+# Search backwards and forwards with a pattern
+bindkey -M vicmd '/' history-incremental-pattern-search-backward
+bindkey -M vicmd '?' history-incremental-pattern-search-forward
+
+# set up for insert mode too
+bindkey -M viins '^R' history-incremental-pattern-search-backward
+bindkey -M viins '^F' history-incremental-pattern-search-forward
+
 # Prompt
 # prompt pure
 
@@ -211,6 +224,7 @@ autoload -U compinit compdef && compinit
 # bindkey -e
 
 # export PATH="/home/mnikl/bin:$PATH"
+# export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

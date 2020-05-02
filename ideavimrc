@@ -55,6 +55,10 @@ nnoremap crn :action RenameElement<cr>
 
 nnoremap gq :action ReformatCode<cr>
 
-nmap <leader><leader> :action KJumpAction<cr>
+#nmap <leader><leader> :action KJumpAction<cr>
 set commentary
 set surround
+set easymotion
+
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>

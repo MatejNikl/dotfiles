@@ -3,16 +3,16 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
-       "height": 1046,
-       "width": 952,
-       "x": 1608,
-       "y": 365
+       "height": 800,
+       "width": 1251,
+       "x": 654,
+       "y": 320
     },
-    "name": "Slack",
+    "name": "GitKraken",
     "percent": 1,
     "swallows": [
        {
-           "class": "^Slack$"
+           "class": "^GitKraken$"
        }
     ],
     "type": "con"
